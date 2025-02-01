@@ -1,1 +1,2 @@
 # newCropera
+this is crop era website which gives a clear information to the farmers or cultivators regarding the water level ,pesticides,fetilizers so that they can get precautions quickly i aslo designed the website in comfortabke language
