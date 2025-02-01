@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 8090;
+const port = process.env.PORT||8090;
 const mongoose = require('mongoose');
 const path = require("path");
 const axios = require("axios");
@@ -15,26 +15,8 @@ app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"public")));
 app.use(express.urlencoded({ extended: true }));
 
-const translations = {
-  en: {
-    waterLevel: "Water Level",
-    pesticides: "Pesticides",
-    fertilizers: "Fertilizers",
-    recommendations: "Agricultural Recommendations:"
-  },
-  te: {
-    waterLevel: "నీటి స్థాయి",
-    pesticides: "పేస్టిసైడ్స్",
-    fertilizers: "గిట్టయాలపట్రలు",
-    recommendations: "వ్యవసాయ సిఫారసులు:"
-  },
-  hi: {
-    waterLevel: "जल स्तर",
-    pesticides: "कीटनाशक",
-    fertilizers: "खाद",
-    recommendations: "कृषि सिफारिशें:"
-  }
-};
+
+
 
 app.get("/",(req,res)=>{
   res.render('2');
